@@ -1,0 +1,5 @@
+
+https://bitnami.com/stack/tomcat  preconfigured debian with tomcat (for Cloud, VM)
+sudo apt-get install xfce4 - install GUI
+startx
+sudo apt-get install iceweasel - install firefox
