@@ -4,12 +4,15 @@ sudo apt-get install xfce4 - install GUI
 startx
 sudo apt-get install iceweasel - install firefox
 sudo apt-get install gnome-terminal - install terminal
---nodejs--
+-- nodej s--
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs
 sudo apt-get install -y build-essential
---https://cesiumjs.org/tutorials/cesium-up-and-running/--
+-- https://cesiumjs.org/tutorials/cesium-up-and-running/ --
 Open a command shell in the Cesium root directory and download/install the required modules by executing:
 npm install
 Finally, start the web server by executing:
 node server.js
+-- obj to gltf -- online 10Mb http://cesiumjs.org/convertmodel.html --
+npm install obj2gltf
+node "C:\Program Files\nodejs\node_modules\obj2gltf\bin\obj2gltf.js" -i C:\Cesium\Apps\SampleData\bldn.obj C:\Cesium\Apps\SampleData\bldn.gltf
