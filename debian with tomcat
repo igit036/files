@@ -12,7 +12,16 @@ sudo apt-get install -y build-essential
 Open a command shell in the Cesium root directory and download/install the required modules by executing:
 npm install
 Finally, start the web server by executing:
-node server.js
+node server.js (node c:\cesium\server.js)
 -- obj to gltf -- online 10Mb http://cesiumjs.org/convertmodel.html --
 npm install obj2gltf
-node "C:\Program Files\nodejs\node_modules\obj2gltf\bin\obj2gltf.js" -i C:\Cesium\Apps\SampleData\bldn.obj C:\Cesium\Apps\SampleData\bldn.gltf
+node "C:\Program Files\nodejs\node_modules\obj2gltf\bin\obj2gltf.js" -i C:\Cesium\Apps\3d\toro.obj C:\Cesium\Apps\3d\toro.gltf 
+(--separateTextures)
+
+var viewer = new Cesium.Viewer('cesiumContainer');var entity = viewer.entities.add({
+    position : Cesium.Cartesian3.fromDegrees(30, 60),
+    model : {
+        uri : '../../3d/toro.gltf'
+    }});
+
+viewer.trackedEntity = entity;
