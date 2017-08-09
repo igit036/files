@@ -1,0 +1,18 @@
+install JRE, tomcat, put geoserver & cesium to 
+---
+geoserver - problem of the filesize of the WAR file of geoserver.
+At default tomcat only accepts 50MB in the WAR files to upload, open with notepad the file: Tomcat 9.0\webapps\manager\WEB-INF\web.xml
+and find the lines with the text: <max-file-size> and <max-request-size>.
+Increase that value, for example:
+<max-file-size>92428800</max-file-size>
+<max-request-size>92428800</max-request-size>
+Restart tomcat and try again.
+---
+
+#Little helps to use SRTM (elevation maps) in geoserver
+
+you can download SRTM data at http://srtm.csi.cgiar.org/ or http://www.viewfinderpanoramas.org/ (90 meters or 3 seconds arc resolution of map is better)
+install GDAL tools and python to work with SRTM http://trac.osgeo.org/gdal/wiki/DownloadingGdalBinaries
+install geoserver image pyramid plugin
+generate a pyramid from SRTM data with gdal_retile command from GDAL tools
+create a layer from generated pyramid ( a guide is available here)
